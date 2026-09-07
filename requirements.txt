@@ -1,0 +1,28 @@
+# VMIE — Python dependencies
+#
+# Tested environment (Python 3.9.5, CUDA 12.1):
+#   torch 2.2.2+cu121 | torchvision 0.17.2+cu121 | numpy 1.26.4 | scipy 1.13.1
+#   opencv-python 5.0.0 | scikit-image 0.24.0 | matplotlib 3.9.0
+#   Pillow 10.2.0 | tqdm 4.66.5
+#
+# GPU users: install torch/torchvision FIRST with a CUDA wheel matching your
+# driver (see https://pytorch.org/get-started/locally/), e.g.:
+#   pip install torch==2.2.2 torchvision==0.17.2 --index-url https://download.pytorch.org/whl/cu121
+# then:
+#   pip install -r requirements.txt
+#
+# CPU-only users can simply run:  pip install -r requirements.txt
+
+torch>=2.0
+torchvision>=0.15
+# NOTE: keep numpy < 2.0 unless you also upgrade torch to a numpy-2-compatible
+# release (>= 2.3); fresh installs otherwise pull numpy 2.x and break torch.
+numpy>=1.24,<2.0
+scipy>=1.10
+# any cv2 distribution works (opencv-python / opencv-python-headless /
+# opencv-contrib-python) — pick ONE, do not install several side by side
+opencv-python>=4.8
+scikit-image>=0.21
+matplotlib>=3.7
+Pillow>=10.0
+tqdm>=4.60

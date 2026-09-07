@@ -1,0 +1,21 @@
+# VS Code local config (contains machine-specific paths, do not publish)
+.vscode/
+
+# Python runtime artifacts
+__pycache__/
+*.pyc
+
+# DCAE training outputs (checkpoints / logs / curves)
+checkpoint_dcae/
+
+# Glow training outputs (samples / checkpoints, wherever training was run)
+checkpoint/
+sample/
+
+# Generated demo output of main.py
+img/VMEI.png
+
+# Private reply-letter drafts (do not publish)
+回信.md
+回信.docx
+.gen_docx.py
