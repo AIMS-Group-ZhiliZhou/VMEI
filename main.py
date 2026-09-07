@@ -90,7 +90,7 @@ if __name__ == '__main__':
     # DCAE model load
     DCAE = DC_AE.DCAE().to(device)
     DCAE.eval()
-    DCAE.load_state_dict(torch.load(f"model_weight/DCAE1.pth",map_location=torch.device(device)))
+    DCAE.load_state_dict(torch.load(f"model_weight/DCAE.pth",map_location=torch.device(device)))
 
     # Image preprocessing
     image = Image.open(image_path).convert('RGB').resize((input_size, input_size))
